@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineDime Network - Rules</title>
+  <meta name="description" content="MineDime Network - Read our official server rules and guidelines to ensure fair gameplay and fun for everyone.">
+  <meta name="keywords" content="Minecraft, MineDime, Server Rules, LifeSteal SMP, PvP Practice">
+  <meta name="author" content="MineDime Network">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://i.pinimg.com/736x/df/8e/e7/df8ee7a1e5c723e18927aee30b3f46e2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      background: #ff7f27;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover { background: #e66910; }
+
+    .hamburger {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .hamburger div { width: 25px; height: 3px; background: white; }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+      transition: right 0.3s ease-in-out;
+      z-index: 200;
+    }
+
+    .mobile-menu a {
+      color: white;
+      background: #ff7f27;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      width: 80%;
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background: red;
+      color: white;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    header {
+      background: rgba(0,0,0,0.85);
+      padding: 40px 20px 20px;
+      border-bottom: 3px solid #ff7f27;
+    }
+    header img { max-width: 150px; margin-bottom: 10px; }
+    h1 { font-size: 3em; color: #ff7f27; margin: 0; }
+
+    .ip-box {
+      background: rgba(0,0,0,0.75);
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      border: 2px solid #ff7f27;
+      cursor: pointer;
+    }
+
+    section {
+      background: rgba(0,0,0,0.7);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    section h2 { color: #ff7f27; margin-bottom: 10px; }
+    section p { line-height: 1.5; font-size: 1.1em; }
+
+    footer {
+      background: rgba(0,0,0,0.85);
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile Hamburger -->
+  <div class="hamburger" onclick="openMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="closeMenu()">X</button>
+    <a href="https://www.minedime.org">Home</a>
+    <a href="https://store.minedime.org">Store</a>
+    <a href="https://discord.gg/JqrTxrPwDR">Discord</a>
+    <a href="https://www.minedime.org/vote">Vote</a>
+    <a href="https://www.minedime.org/rules">Rules</a>
+    <a href="https://www.minedime.org/news">News</a>
+    <a href="https://www.minedime.org/apply">Apply</a>
+  </div>
+
+  <header>
+    <img src="logo.png" alt="MineDime Logo">
+    <h1>MineDime Network</h1>
+    <p>Version: 1.21+</p>
+  </header>
+
+  <nav>
+    <a href="https://www.minedime.org">Home</a>
+    <a href="https://store.minedime.org">Store</a>
+    <a href="https://discord.gg/JqrTxrPwDR">Discord</a>
+    <a href="https://www.minedime.org/vote">Vote</a>
+    <a href="https://www.minedime.org/rules">Rules</a>
+    <a href="https://www.minedime.org/news">News</a>
+    <a href="https://www.minedime.org/apply">Apply</a>
+  </nav>
+
+  <main>
+    <div class="ip-box" onclick="copyIP()">
+      <strong>Server IP:</strong> <span id="server-ip">play.minedime.org</span>
+    </div>
+    <p>Click the IP to copy!</p>
+
+    <section>
+      <h2>📜 Server Rules</h2>
+      <p>1. Be respectful to all players and staff.</p>
+      <p>2. No griefing, stealing, or exploiting glitches.</p>
+      <p>3. Keep chat clean—no offensive language or spam.</p>
+      <p>4. No cheating, hacking, or using unfair mods.</p>
+      <p>5. Follow all staff instructions immediately.</p>
+      <p>6. Enjoy the game and have fun!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MineDime Network. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openMenu() { document.getElementById('mobileMenu').style.right = '0'; }
+    function closeMenu() { document.getElementById('mobileMenu').style.right = '-250px'; }
+    function copyIP() {
+      const ip = document.getElementById('server-ip').innerText;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert('IP copied to clipboard: ' + ip);
+      });
+    }
+  </script>
+</body>
+</html>
